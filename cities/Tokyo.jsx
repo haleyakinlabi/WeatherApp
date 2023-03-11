@@ -10,7 +10,7 @@ const Tokyo = () => {
     const fetchWeatherData = async () => {
       try {
         const response = await axios.get(
-          'https://api.open-meteo.com/v1/forecast?latitude=35.67&longitude=139.65&hourly=temperature_2m&daily=temperature_2m_max,temperature_2m_min&current_weather=true&temperature_unit=fahrenheit&windspeed_unit=mph&precipitation_unit=inch&timezone=auto'
+          'https://api.open-meteo.com/v1/forecast?latitude=35.6762&longitude=139.6503&hourly=temperature_2m&daily=temperature_2m_max,temperature_2m_min&current_weather=true&temperature_unit=fahrenheit&windspeed_unit=mph&precipitation_unit=inch&timezone=auto'
         );
         setWeatherData(response.data);
       } catch (error) {
