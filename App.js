@@ -1,14 +1,14 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-
-import WeatherComponent from './cities/NewYork';
-
+import PopularCities from './screens/PopularCities';
+import Tokyo from './cities/Tokyo';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>WeatherApp</Text>
-      <WeatherComponent></WeatherComponent>
+      <PopularCities></PopularCities>
+      
+      
       <StatusBar style="auto" />
     </View>
   );
