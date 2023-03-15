@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, Button, Modal, TouchableOpacity, ScrollView } from 'react-native';
+import { View, Text, Button, Modal, TouchableOpacity, ScrollView, StyleSheet } from 'react-native';
 import Montgomery from '../cities/Montgomery';
 import Juneau from '../cities/Juneau';
 import Phoenix from '../cities/Phoenix';
@@ -63,9 +63,9 @@ const PopularCities = () => {
 
   return (
     <View>
-      <TouchableOpacity onPress={() => setModalVisible(true)} style={{ padding: 16 }}>
-        <Text style={{ fontSize: 18 }}>
-          {city ? city : 'Select a State Capital'}
+      <TouchableOpacity onPress={() => setModalVisible(true)} style={{ padding: 16,}}>
+        <Text style={{ fontSize: 20, fontFamily: 'Futura', color: '#595959'}}>
+          {city ? city : 'State Capitals'}
         </Text>
       </TouchableOpacity>
 
@@ -75,60 +75,60 @@ const PopularCities = () => {
         transparent={true}
         onRequestClose={() => setModalVisible(false)}
       >
-        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: 'rgba(0, 0, 0, 0.5)' }}>
-          <View style={{ backgroundColor: '#fff', padding: 16, borderRadius: 8 }}>
-          <ScrollView style={{ maxHeight: 300, maxWidth: 300 }}>
-            <Button title="Albany" onPress={() => handleCitySelect('Albany')} />
-            <Button title="Annapolis" onPress={() => handleCitySelect('Annapolis')} />
-            <Button title="Atlanta" onPress={() => handleCitySelect('Atlanta')} />
-            <Button title="Augusta" onPress={() => handleCitySelect('Augusta')} />
-            <Button title="Austin" onPress={() => handleCitySelect('Austin')} />
-            <Button title="Baton Rouge" onPress={() => handleCitySelect('Baton Rouge')} />
-            <Button title="Bismarck" onPress={() => handleCitySelect('Bismarck')} />
-            <Button title="Boise" onPress={() => handleCitySelect('Boise')} />
-            <Button title="Boston" onPress={() => handleCitySelect('Boston')} />
-            <Button title="Carson City" onPress={() => handleCitySelect('Carson City')} />
-            <Button title="Charleston" onPress={() => handleCitySelect('Charleston')} />
-            <Button title="Cheyenne" onPress={() => handleCitySelect('Cheyenne')} />
-            <Button title="Columbia" onPress={() => handleCitySelect('Columbia')} />
-            <Button title="Columbus" onPress={() => handleCitySelect('Columbus')} />
-            <Button title="Concord" onPress={() => handleCitySelect('Concord')} />
-            <Button title="Denver" onPress={() => handleCitySelect('Denver')} />
-            <Button title="Des Moines" onPress={() => handleCitySelect('Des Moines')} />
-            <Button title="Dover" onPress={() => handleCitySelect('Dover')} />
-            <Button title="Frankfort" onPress={() => handleCitySelect('Frankfort')} />
-            <Button title="Harrisburg" onPress={() => handleCitySelect('Harrisburg')} />
-            <Button title="Hartford" onPress={() => handleCitySelect('Hartford')} />
-            <Button title="Helena" onPress={() => handleCitySelect('Helena')} />
-            <Button title="Honolulu" onPress={() => handleCitySelect('Honolulu')} />
-            <Button title="Indianapolis" onPress={() => handleCitySelect('Indianapolis')} />
-            <Button title="Jackson" onPress={() => handleCitySelect('Jackson')} />
-            <Button title="Jefferson City" onPress={() => handleCitySelect('Jefferson City')} />
-            <Button title="Juneau" onPress={() => handleCitySelect('Juneau')} />
-            <Button title="Lansing" onPress={() => handleCitySelect('Lansing')} />
-            <Button title="Lincoln" onPress={() => handleCitySelect('Lincoln')} />
-            <Button title="Little Rock" onPress={() => handleCitySelect('Little Rock')} />
-            <Button title="Madison" onPress={() => handleCitySelect('Madison')} />
-            <Button title="Montgomery" onPress={() => handleCitySelect('Montgomery')} />
-            <Button title="Montpelier" onPress={() => handleCitySelect('Montpelier')} />
-            <Button title="Nashville" onPress={() => handleCitySelect('Nashville')} />
-            <Button title="Oklahoma City" onPress={() => handleCitySelect('Oklahoma City')} />
-            <Button title="Olympia" onPress={() => handleCitySelect('Olympia')} />
-            <Button title="Phoenix" onPress={() => handleCitySelect('Phoenix')} />
-            <Button title="Pierre" onPress={() => handleCitySelect('Pierre')} />
-            <Button title="Providence" onPress={() => handleCitySelect('Providence')} />
-            <Button title="Raleigh" onPress={() => handleCitySelect('Raleigh')} />
-            <Button title="Richmond" onPress={() => handleCitySelect('Richmond')} />
-            <Button title="Sacramento" onPress={() => handleCitySelect('Sacramento')} />
-            <Button title="Salem" onPress={() => handleCitySelect('Salem')} />
-            <Button title="Salt Lake City" onPress={() => handleCitySelect('Salt Lake City')} />
-            <Button title="Santa Fe" onPress={() => handleCitySelect('Santa Fe')} />
-            <Button title="Springfield" onPress={() => handleCitySelect('Springfield')} />
-            <Button title="St. Paul" onPress={() => handleCitySelect('St. Paul')} />
-            <Button title="Tallahassee" onPress={() => handleCitySelect('Tallahassee')} />
-            <Button title="Topeka" onPress={() => handleCitySelect('Topeka')} />
-            <Button title="Trenton" onPress={() => handleCitySelect('Trenton')} />
-            <Button title="Cancel" onPress={() => setModalVisible(false)} />
+        <View style={styles.StyleOne}>
+          <View style={styles.StyleTwo}>
+          <ScrollView style={styles.StyleThree}>
+            <Button style={styles.Button}title="Albany" onPress={() => handleCitySelect('Albany')} />
+            <Button style={styles.Button}title="Annapolis" onPress={() => handleCitySelect('Annapolis')} />
+            <Button style={styles.Button}title="Atlanta" onPress={() => handleCitySelect('Atlanta')} />
+            <Button style={styles.Button}title="Augusta" onPress={() => handleCitySelect('Augusta')} />
+            <Button style={styles.Button}title="Austin" onPress={() => handleCitySelect('Austin')} />
+            <Button style={styles.Button}title="Baton Rouge" onPress={() => handleCitySelect('Baton Rouge')} />
+            <Button style={styles.Button}title="Bismarck" onPress={() => handleCitySelect('Bismarck')} />
+            <Button style={styles.Button}title="Boise" onPress={() => handleCitySelect('Boise')} />
+            <Button style={styles.Button}title="Boston" onPress={() => handleCitySelect('Boston')} />
+            <Button style={styles.Button}title="Carson City" onPress={() => handleCitySelect('Carson City')} />
+            <Button style={styles.Button}title="Charleston" onPress={() => handleCitySelect('Charleston')} />
+            <Button style={styles.Button}title="Cheyenne" onPress={() => handleCitySelect('Cheyenne')} />
+            <Button style={styles.Button}title="Columbia" onPress={() => handleCitySelect('Columbia')} />
+            <Button style={styles.Button}title="Columbus" onPress={() => handleCitySelect('Columbus')} />
+            <Button style={styles.Button}title="Concord" onPress={() => handleCitySelect('Concord')} />
+            <Button style={styles.Button}title="Denver" onPress={() => handleCitySelect('Denver')} />
+            <Button style={styles.Button}title="Des Moines" onPress={() => handleCitySelect('Des Moines')} />
+            <Button style={styles.Button}title="Dover" onPress={() => handleCitySelect('Dover')} />
+            <Button style={styles.Button}title="Frankfort" onPress={() => handleCitySelect('Frankfort')} />
+            <Button style={styles.Button}title="Harrisburg" onPress={() => handleCitySelect('Harrisburg')} />
+            <Button style={styles.Button}title="Hartford" onPress={() => handleCitySelect('Hartford')} />
+            <Button style={styles.Button}title="Helena" onPress={() => handleCitySelect('Helena')} />
+            <Button style={styles.Button}title="Honolulu" onPress={() => handleCitySelect('Honolulu')} />
+            <Button style={styles.Button}title="Indianapolis" onPress={() => handleCitySelect('Indianapolis')} />
+            <Button style={styles.Button}title="Jackson" onPress={() => handleCitySelect('Jackson')} />
+            <Button style={styles.Button}title="Jefferson City" onPress={() => handleCitySelect('Jefferson City')} />
+            <Button style={styles.Button}title="Juneau" onPress={() => handleCitySelect('Juneau')} />
+            <Button style={styles.Button}title="Lansing" onPress={() => handleCitySelect('Lansing')} />
+            <Button style={styles.Button}title="Lincoln" onPress={() => handleCitySelect('Lincoln')} />
+            <Button style={styles.Button}title="Little Rock" onPress={() => handleCitySelect('Little Rock')} />
+            <Button style={styles.Button}title="Madison" onPress={() => handleCitySelect('Madison')} />
+            <Button style={styles.Button}title="Montgomery" onPress={() => handleCitySelect('Montgomery')} />
+            <Button style={styles.Button}title="Montpelier" onPress={() => handleCitySelect('Montpelier')} />
+            <Button style={styles.Button}title="Nashville" onPress={() => handleCitySelect('Nashville')} />
+            <Button style={styles.Button}title="Oklahoma City" onPress={() => handleCitySelect('Oklahoma City')} />
+            <Button style={styles.Button}title="Olympia" onPress={() => handleCitySelect('Olympia')} />
+            <Button style={styles.Button}title="Phoenix" onPress={() => handleCitySelect('Phoenix')} />
+            <Button style={styles.Button}title="Pierre" onPress={() => handleCitySelect('Pierre')} />
+            <Button style={styles.Button}title="Providence" onPress={() => handleCitySelect('Providence')} />
+            <Button style={styles.Button}title="Raleigh" onPress={() => handleCitySelect('Raleigh')} />
+            <Button style={styles.Button}title="Richmond" onPress={() => handleCitySelect('Richmond')} />
+            <Button style={styles.Button}title="Sacramento" onPress={() => handleCitySelect('Sacramento')} />
+            <Button style={styles.Button}title="Salem" onPress={() => handleCitySelect('Salem')} />
+            <Button style={styles.Button}title="Salt Lake City" onPress={() => handleCitySelect('Salt Lake City')} />
+            <Button style={styles.Button}title="Santa Fe" onPress={() => handleCitySelect('Santa Fe')} />
+            <Button style={styles.Button}title="Springfield" onPress={() => handleCitySelect('Springfield')} />
+            <Button style={styles.Button}title="St. Paul" onPress={() => handleCitySelect('St. Paul')} />
+            <Button style={styles.Button}title="Tallahassee" onPress={() => handleCitySelect('Tallahassee')} />
+            <Button style={styles.Button}title="Topeka" onPress={() => handleCitySelect('Topeka')} />
+            <Button style={styles.Button}title="Trenton" onPress={() => handleCitySelect('Trenton')} />
+            <Button style={styles.Button}title="Cancel" onPress={() => setModalVisible(false)} />
           </ScrollView>
             
             
@@ -196,6 +196,32 @@ const PopularCities = () => {
     </View>
   );
 };
+
+const styles = StyleSheet.create({
+    StyleOne: {
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
+      backgroundColor: 'lightgrey',
+      
+    },
+    StyleTwo: {
+      backgroundColor: '#fff',
+      padding: 16,
+      borderRadius: 8,
+      fontFamily:'Verdana',
+      
+    }, 
+    StyleThree:{
+      maxHeight: 300,
+      maxWidth: 400,
+      borderRadius: 20,
+    },
+    Button:{
+      color: 'black',
+    }
+  });
+  
 
 export default PopularCities;
 
