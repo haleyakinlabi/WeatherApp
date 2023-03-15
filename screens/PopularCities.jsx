@@ -13,6 +13,12 @@ import Tallahassee from '../cities/Tallahassee';
 import Atlanta from '../cities/Atlanta';
 import Honolulu from '../cities/Honolulu';
 import Boise from '../cities/Boise';
+import Springfield from '../cities/Springfield';
+import Indianapolis from '../cities/Indianapolis';
+import DesMoines from '../cities/DesMoines';
+import Topeka from '../cities/Topeka';
+import Frankfort from '../cities/Frankfort';
+import BatonRouge from '../cities/BatonRouge';
 
 
 const PopularCities = () => {
@@ -54,6 +60,12 @@ const PopularCities = () => {
             <Button title="Atlanta" onPress={() => handleCitySelect('Atlanta')} />
             <Button title="Honolulu" onPress={() => handleCitySelect('Honolulu')} />
             <Button title="Boise" onPress={() => handleCitySelect('Boise')} />
+            <Button title="Springfield" onPress={() => handleCitySelect('Springfield')} />
+            <Button title="Indianapolis" onPress={() => handleCitySelect('Indianapolis')} />
+            <Button title="Des Moines" onPress={() => handleCitySelect('Des Moines')} />
+            <Button title="Topeka" onPress={() => handleCitySelect('Topeka')} />
+            <Button title="Frankfort" onPress={() => handleCitySelect('Frankfort')} />
+            <Button title="Baton Rouge" onPress={() => handleCitySelect('Baton Rouge')} />
             
             
            
@@ -78,6 +90,12 @@ const PopularCities = () => {
       {city === 'Atlanta' && <Atlanta />}
       {city === 'Honolulu' && <Honolulu />}
       {city === 'Boise' && <Boise />}
+      {city === 'Springfield' && <Springfield />}
+      {city === 'Indianapolis' && <Indianapolis />}
+      {city === 'Des Moines' && <DesMoines />}
+      {city === 'Topeka' && <Topeka />}
+      {city === 'Frankfort' && <Frankfort />}
+      {city === 'Baton Rouge' && <BatonRouge />}
       
     </View>
   );
