@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { View, Text, StyleSheet, Image } from 'react-native';
 import axios from 'axios';
 
-const Shanghai = () => {
+const LittleRock = () => {
   
   const [weatherData, setWeatherData] = useState(null);
 
@@ -10,7 +10,7 @@ const Shanghai = () => {
     const fetchWeatherData = async () => {
       try {
         const response = await axios.get(
-          'https://api.open-meteo.com/v1/forecast?latitude=31.2304&longitude=121.4737&hourly=temperature_2m&daily=temperature_2m_max,temperature_2m_min&current_weather=true&temperature_unit=fahrenheit&windspeed_unit=mph&precipitation_unit=inch&timezone=auto'
+          'https://api.open-meteo.com/v1/forecast?latitude=34.75&longitude=-92.29&hourly=temperature_2m&daily=temperature_2m_max,temperature_2m_min&current_weather=true&temperature_unit=fahrenheit&windspeed_unit=mph&precipitation_unit=inch&timezone=auto'
         );
         setWeatherData(response.data);
       } catch (error) {
@@ -26,8 +26,8 @@ const Shanghai = () => {
     <View>
       {weatherData && (
         <View style={styles.Data}>
-          <Image style={styles.Img} source={require("../assets/Shanghai.png")}></Image>
-          <Text style={styles.City}>Shanghai, China</Text>
+          <Image style={styles.Img} source={require("../assets/LittleRock.png")}></Image>
+          <Text style={styles.City}>Little Rock, Arkansas</Text>
           <Text style={styles.Temps}>Now: {weatherData.current_weather.temperature} °F</Text>
           <Text style={styles.Temps}>Max: {weatherData.daily.temperature_2m_max[0]} °F</Text>
           <Text style={styles.Temps}>Min: {weatherData.daily.temperature_2m_min[0]} °F</Text>
@@ -71,4 +71,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default Shanghai;
+export default LittleRock;

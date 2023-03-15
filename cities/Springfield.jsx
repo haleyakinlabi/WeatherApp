@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { View, Text, StyleSheet, Image } from 'react-native';
 import axios from 'axios';
 
-const SaoPaulo = () => {
+const Tallahassee = () => {
   
   const [weatherData, setWeatherData] = useState(null);
 
@@ -10,7 +10,7 @@ const SaoPaulo = () => {
     const fetchWeatherData = async () => {
       try {
         const response = await axios.get(
-          'https://api.open-meteo.com/v1/forecast?latitude=23.5558&longitude=46.6396&hourly=temperature_2m&daily=temperature_2m_max,temperature_2m_min&current_weather=true&temperature_unit=fahrenheit&windspeed_unit=mph&precipitation_unit=inch&timezone=auto'
+          'https://api.open-meteo.com/v1/forecast?latitude=30.44&longitude=-84.28&hourly=temperature_2m&daily=temperature_2m_max,temperature_2m_min&current_weather=true&temperature_unit=fahrenheit&windspeed_unit=mph&precipitation_unit=inch&timezone=auto'
         );
         setWeatherData(response.data);
       } catch (error) {
@@ -26,8 +26,8 @@ const SaoPaulo = () => {
     <View>
       {weatherData && (
         <View style={styles.Data}>
-          <Image style={styles.Img} source={require("../assets/SaoPaulo.png")}></Image>
-          <Text style={styles.City}>São Paulo, Brazil</Text>
+          <Image style={styles.Img} source={require("../assets/Tallahassee.png")}></Image>
+          <Text style={styles.City}>Tallahassee, Florida</Text>
           <Text style={styles.Temps}>Now: {weatherData.current_weather.temperature} °F</Text>
           <Text style={styles.Temps}>Max: {weatherData.daily.temperature_2m_max[0]} °F</Text>
           <Text style={styles.Temps}>Min: {weatherData.daily.temperature_2m_min[0]} °F</Text>
@@ -71,4 +71,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default SaoPaulo;
+export default Tallahassee;
