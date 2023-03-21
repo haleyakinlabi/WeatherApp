@@ -44,6 +44,7 @@ function SearchScreen({ navigation }) {
       <View style={styles.container2}>
         <Button title="Go Back" onPress={() => navigation.goBack()} />
         <Button title="Home" onPress={() => navigation.navigate('Home')} />
+        <Button title="State Capitals" onPress={() => navigation.navigate('StateCapitals')} />
       </View>
       
       <View style={styles.PopularCities}>
