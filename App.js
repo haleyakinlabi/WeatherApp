@@ -14,21 +14,34 @@ function HomeScreen({ navigation }) {
     <View style={styles.container}>
       <Text>Home Screen</Text>
       <Button 
-      title="Go to Details"
-      onPress={() => navigation.navigate('Details')}/> 
+      title="Go to Search"
+      onPress={() => navigation.navigate('Search')}/> 
+      <Button
+      title="State Capitals"
+      onPress={() => navigation.navigate('StateCapitals')}/>
     </View>
   );
 }
 
-function DetailsScreen({ navigation }) {
+function SearchScreen({ navigation }) {
   return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Details Screen</Text>
-      <Button 
-      title="Go to Details ...again"
-      onPress={() => navigation.navigate('Details')}/> 
+    <View style={styles.container}>
+      <Button title="<" onPress={() => navigation.goBack()} />
+      <Button title="Go to Home" onPress={() => navigation.navigate('Home')} />
+      <Text>Search</Text>
     </View>
   );
+}
+
+function StateCapitals({ navigation }) {
+  return (
+    <View style={styles.container}>
+      <Button title="<" onPress={() => navigation.goBack()} />
+      <Button title="Go to Home" onPress={() => navigation.navigate('Home')} />
+      <PopularCities/>
+      <Text>...</Text>
+    </View>
+  )
 }
 
 const Stack = createNativeStackNavigator();
@@ -43,9 +56,12 @@ function App() {
         options={{title: 'Overview'}} 
         />
         <Stack.Screen 
-        name="Details" 
-        component={DetailsScreen} 
+        name="Search" 
+        component={SearchScreen} 
         />
+        <Stack.Screen 
+        name="StateCapitals"
+        component={StateCapitals}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
