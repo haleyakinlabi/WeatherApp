@@ -24,6 +24,12 @@ function HomeScreen({ navigation }) {
         onPress={() => navigation.navigate('StateCapitals')}/>
       </View>
 
+      <View style={styles.PopularCities}>
+        <Text style={styles.Text}>Welcome To Thermozone!</Text>
+        <Text style={styles.Text2}>A Weather App That Tracks Current</Text>
+        <Text style={styles.Text2}>Temeratures Across The Globe! </Text>
+        <Image source={require('./assets/globe.png')} style={styles.Globe} />
+      </View>
 
     </SafeAreaView>
   );
@@ -51,8 +57,9 @@ function StateCapitals({ navigation }) {
       <Logo/>
 
       <View style={styles.container2}>
-        <Button title="Back" onPress={() => navigation.goBack()} />
-        <Button title="Go to Home" onPress={() => navigation.navigate('Home')} />
+        <Button title="Go Back" onPress={() => navigation.goBack()} />
+        <Button title="Home" onPress={() => navigation.navigate('Home')} />
+        <Button title="Search" onPress={() => navigation.navigate('Search')}/>
       </View>
       <View style={styles.PopularCities}>
         <Image source={require("./assets/arrow.png")}style={styles.arrow}/>
@@ -112,6 +119,18 @@ const styles = StyleSheet.create({
   arrow: {
     height: 30,
     width: 30,
+  },
+  Text: {
+    fontFamily: 'Futura',
+    fontSize: 40,
+  },
+  Text2: {
+    fontFamily: 'Verdana',
+    fontSize: 15,
+  }, 
+  Globe: {
+    height: 250, 
+    width: 250,
   }
 });
 
