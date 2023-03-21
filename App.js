@@ -4,6 +4,7 @@ import PopularCities from "./screens/PopularCities";
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Logo from "./screens/Logo";
+import SearchTemp from "./screens/SearchTemp";
 
 
 
@@ -40,10 +41,13 @@ function SearchScreen({ navigation }) {
     <SafeAreaView style={styles.container}>
       <Logo/>
     
-    
       <View style={styles.container2}>
         <Button title="Go Back" onPress={() => navigation.goBack()} />
         <Button title="Home" onPress={() => navigation.navigate('Home')} />
+      </View>
+      
+      <View style={styles.PopularCities}>
+        <SearchTemp />
       </View>
 
     </SafeAreaView>
